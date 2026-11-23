@@ -1,0 +1,455 @@
+/* Cart Component Styles */
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e1e5e9;
+}
+
+.cart-header h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.clear-cart-btn {
+  font-size: 0.9rem;
+}
+
+/* Empty Cart Styles */
+.empty-cart {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.empty-cart-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-cart h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-cart p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Cart Content Layout */
+.cart-content {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cart Items List */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cart-item {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  max-height: 200px;
+  align-items: stretch;
+  min-width: 0;
+  width: 100%;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.cart-item-image {
+  width: 140px;
+  min-width: 140px;
+  height: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.5rem;
+}
+
+.cart-item-details {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.vehicle-header h4 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vehicle-type {
+  color: var(--text-secondary);
+  margin: 0;
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.rental-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Rental Info Row - Layout inline trên cùng 1 hàng */
+.rental-info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  flex-wrap: wrap;
+}
+
+.rental-info-row:hover {
+  background: #e9ecef;
+  transform: translateX(2px);
+}
+
+.rental-info-row .icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.rental-info-row .label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.rental-info-row > span {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.rental-info-row .separator {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 0 0.2rem;
+  flex-shrink: 0;
+}
+
+.duration-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* Station Info */
+.station-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.station-name {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.station-address {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.not-selected {
+  color: #dc3545;
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.cart-item-price {
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-left: 1px solid #e1e5e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.price-breakdown {
+  text-align: center;
+  margin-bottom: auto;
+  padding-top: 0.25rem;
+}
+
+.daily-price {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+}
+
+.total-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--success-color);
+  white-space: nowrap;
+}
+
+.remove-btn {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Cart Summary */
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 2rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.summary-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+
+.summary-details {
+  margin-bottom: 1.5rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 1rem;
+  align-items: center;
+}
+
+.summary-row > span:first-child {
+  flex-shrink: 0;
+}
+
+.summary-row > span:last-child {
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.summary-row.tax {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.checkout-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.continue-shopping {
+  order: 2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkout-btn {
+  order: 1;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-notes {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.cart-notes h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.cart-notes ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.cart-notes li {
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .cart-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .cart-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+  }
+  
+  .cart-item-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .cart-item-details {
+    padding: 1rem;
+  }
+
+  .vehicle-header h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Responsive rental info rows */
+  .rental-info-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.6rem;
+  }
+
+  .info-label {
+    font-size: 0.85rem;
+  }
+
+  .info-value {
+    padding-left: 1.75rem;
+    font-size: 0.85rem;
+  }
+
+  .duration-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .station-name {
+    font-size: 0.9rem;
+  }
+
+  .station-address {
+    font-size: 0.8rem;
+  }
+  
+  .cart-item-price {
+    padding: 1rem;
+    border-left: none;
+    border-top: 1px solid #e1e5e9;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: auto;
+  }
+  
+  .checkout-actions {
+    flex-direction: row;
+  }
+  
+  .continue-shopping {
+    order: 1;
+    flex: 1;
+  }
+  
+  .checkout-btn {
+    order: 2;
+    flex: 2;
+  }
+}
